@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.wrapper {
+  width: 95%;
+  margin: 0 auto;
+}
+
+#search-container {
+  margin: 1em auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#search-container input {
+  border-radius: 60px;
+  background-color: rgba(227, 225, 225, 0.745);
+  width: 40%;
+  border-bottom: 2px solid;
+  padding: 0.3em;
+  cursor: pointer;
+}
+
+#search-container #search,
+#buttons button {
+  box-sizing: border-box;
+  background-color: rgb(245, 245, 245);
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#buttons button {
+  padding: 5px 15px;
+  border-radius: 40px;
+  border: none;
+}
+
+#search-container #search:hover,
+#buttons button:hover {
+  background-color: rgb(203, 203, 216);
+}
+
+#search-container input:focus {
+  border-bottom: 2px solid #6759ff;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 30px;
+  width: 30px;
+  background: url("cancel.svg") no-repeat center;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #9e9996a4;
+  color: #000000;
+}
+
+#products {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 1.5em;
+  padding: 2em 0;
+}
+
+.card {
+  background-color: #ffffff;
+  max-width: 18em;
+  margin-top: 1em;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 1em 2em 2.5em rgba(1, 2, 68, 0.08);
+}
+
+.image-container {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+  height: 15em;
+}
+
+.container {
+  padding-top: 1em;
+  color: #110f29;
+}
+
+.container h5 {
+  font-weight: 500;
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (max-width: 720px) {
+  img {
+    max-width: 100%;
+    object-fit: contain;
+    height: 10em;
+  }
+  .card {
+    max-width: 10em;
+    margin-top: 1em;
+  }
+  #products {
+    grid-template-columns: auto auto;
+    grid-column-gap: 1em;
+  }
+}
